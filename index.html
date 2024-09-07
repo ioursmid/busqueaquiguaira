@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busque aqui Guaíra !</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+   
+    <header class="logosite">
+        <div>
+           <h1>Busque aqui Guaíra !</h1>
+
+        </div>
+        
+        
+    </header>
+  
+    <div class="container">
+
+        <div class="slideshow-container">
+            <div class="slides fade">
+                <img src="https://i.postimg.cc/xCGs2h7r/logoalfa.png" style="width:50%; border-radius:50px">
+            </div>
+
+            <div class="slides fade">
+                <img src="https://i.postimg.cc/Gp799myd/churrascoprimelogo.jpg" style="width:50%; border-radius:50px">
+            </div>
+
+            <div class="slides fade">
+                <img src="https://i.postimg.cc/pTLXHbG4/logoescarpas.png" style="width:50%; border-radius:50px">
+            </div>
+
+            <!-- Botões de navegação -->
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Buscar empresa...">
+            <button type="button" onclick="buscarEmpresa()">Buscar</button>
+            <button type="button" onclick="mostrarSomenteCategorias()">Mostrar Categorias</button> <!-- Novo botão -->
+        </div>
+
+
+
+
+        <!-- Barra de Categorias -->
+        <nav>
+            <ul class="categorias">
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('academias')">Academias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('acougues')">Açougues</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('agencias-de-viagem')">Agências de Viagem</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('alfaiatarias')">Alfaiatarias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('armazens')">Armazéns</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('atelies')">Ateliês</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('autoescolas')">Autoescolas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('bancos')">Bancos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('bares')">Bares</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('bibliotecas')">Bibliotecas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('boutiques')">Boutiques</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('cafeterias')">Cafeterias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('cabeleireiros')">Cabeleireiros</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('casas-de-cambio')">Casas de Câmbio</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('centros-automotivos')">Centros Automotivos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('centros-culturais')">Centros Culturais</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('clinicas-de-estetica')">Clínicas de Estética</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('clinicas-medicas')">Clínicas Médicas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('colegios')">Colégios</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('confeitarias')">Confeitarias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('consultorios-odontologicos')">Consultórios Odontológicos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('correios')">Correios</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('creches')">Creches</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('decoracao')">Decoração</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('drogarias')">Drogarias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('escolas-de-idiomas')">Escolas de Idiomas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('escolas-de-musica')">Escolas de Música</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('escritorios-de-advocacia')">Escritórios de Advocacia</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('estudios-fotograficos')">Estúdios Fotográficos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('farmacias')">Farmácias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('floriculturas')">Floriculturas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('frutarias')">Frutarias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('galerias-de-arte')">Galerias de Arte</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('hamburguerias')">Hamburguerias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('hospitais')">Hospitais</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('hoteis')">Hotéis</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('imobiliarias')">Imobiliárias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('igrejas')">Igrejas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('joalherias')">Joalherias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lanchonetes')">Lanchonetes</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lavanderias')">Lavanderias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('livrarias')">Livrarias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-antiguidades')">Lojas de Antiguidades</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-brinquedos')">Lojas de Brinquedos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-celulares')">Lojas de Celulares</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-departamentos')">Lojas de Departamentos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-eletronicos')">Lojas de Eletrônicos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-informatica')">Lojas de Informática</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-material-de-construcao')">Lojas de Material de Construção</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-moveis')">Lojas de Móveis</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-roupas')">Lojas de Roupas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-sapatos')">Lojas de Sapatos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-utilidades-domesticas')">Lojas de Utilidades Domésticas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('mercados')">Mercados</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('moteis')">Motéis</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('museus')">Museus</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('padarias')">Padarias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('parques')">Parques</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('pizzarias')">Pizzarias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('postos-de-gasolina')">Postos de Gasolina</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('pousadas')">Pousadas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('restaurantes')">Restaurantes</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('saloes-de-beleza')">Salões de Beleza</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('sorveterias')">Sorveterias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('supermercados')">Supermercados</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('teatros')">Teatros</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('templos-religiosos')">Templos Religiosos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('veterinarias')">Veterinárias</a></li>
+            </ul>
+        </nav>
+
+        <div id="lista-empresas"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
