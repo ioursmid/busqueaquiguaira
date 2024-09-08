@@ -140,26 +140,6 @@ empresas.forEach(empresa => {
     listaEmpresas.appendChild(empresaDiv);
 });
 
-// Script para função de slide
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("slides");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000); // Muda de imagem a cada 3 segundos
-}
-
-function plusSlides(n) {
-    slideIndex += n - 1;
-    showSlides();
-}
 
 function buscarEmpresa() {
     const termoBusca = document.getElementById('search-input').value.toLowerCase();
@@ -167,7 +147,7 @@ function buscarEmpresa() {
     const categorias = document.querySelector('.categorias'); // Seleciona o elemento de categorias
 
     const resultados = empresas.filter(empresa =>
-        empresa.descricao.toLowerCase().includes(termoBusca)
+        empresa.descricao.toLowerCase().includes(termoBusca) || empresa.categoria.toLowerCase().includes(termoBusca)
     );
 
     if (resultados.length > 0) {
@@ -179,20 +159,22 @@ function buscarEmpresa() {
             empresaDiv.innerHTML = `
                 <img src="${empresa.logo}" alt="Logo da empresa" />
                 <p>${empresa.descricao}</p>
-                 <div class="botoes">
-                <a href="${empresa.whatsapp}" target="_blank"><button><i class="fab fa-whatsapp"></i></button></a>
-                <a href="${empresa.instagram}" target="_blank"><button><i class="fab fa-instagram"></i></button></a>
-                <a href="${empresa.localizacao}" target="_blank"><button><i class="fas fa-map-marker-alt"></i></button></a>
-        </div>
+                <div class="botoes">
+                    <a href="${empresa.whatsapp}" target="_blank"><button><i class="fab fa-whatsapp"></i></button></a>
+                    <a href="${empresa.instagram}" target="_blank"><button><i class="fab fa-instagram"></i></button></a>
+                    <a href="${empresa.localizacao}" target="_blank"><button><i class="fas fa-map-marker-alt"></i></button></a>
+                </div>
             `;
 
             listaEmpresas.appendChild(empresaDiv);
         });
     } else {
-        categorias.style.display ='none'; // Mostra as categorias novamente se não houver resultados
+        categorias.style.display = 'none'; // Esconde as categorias
         listaEmpresas.innerHTML = '<p>Nenhuma empresa encontrada.</p>';
     }
 }
+
+
 
 function mostrarSomenteCategorias() {
     const categorias = document.querySelector('.categorias');
