@@ -1,317 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<title>Free Bootstrap Template | webthemez</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="" />
-<meta name="author" content="http://webthemez.com" />
-<!-- css -->
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
-<link href="css/jcarousel.css" rel="stylesheet" />
-<link href="css/flexslider.css" rel="stylesheet" />
-<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet" />
- 
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="http://instagram/douuglinha95" />
+    <title>Busque aqui Guaíra !</title>
+    <!--css-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/jcarousel.css" rel="stylesheet" />
+    <link href="css/flexslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 </head>
 <body>
-<div id="wrapper">
-	<!-- start header -->
-	<header>
-        <div class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+<div id="wrapper"></div>
+   
+        <header class="logosite">
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                     <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"/></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Inicio</a></li> 
+                            <li><a href="services.html">Serviços</a></li>
+                            <li><a href="portfolio.html">Portifolio</a></li>
+                            <li><a href="pricing.html">Preços</a></li>
+                            <li><a href="contact.html">Contatos</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li> 
-						<li><a href="about.html">About Us</a></li>
-						<li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+            </div>
+        
+        
+    </header>
+    <section id="featured">
+	 
+        <!-- Slider -->
+            <div id="main-slider" class="flexslider">
+                <ul class="slides">
+                  <li>
+                    <img src="https://i.postimg.cc/xCGs2h7r/logoalfa.png" alt="" />
+                    <div class="flex-caption">
+                        <h3>Alfa Prime !</h3> 
+                        <p>Está precisando trocar seu celular, venha pra Alfa Prime!</p>  
+                    </div>
+                  </li>
+                  <li>
+                    <img src="https://i.postimg.cc/Gp799myd/churrascoprimelogo.jpg" alt="" />
+                    <div class="flex-caption">
+                        <h3>Churrasco Prime!</h3> 
+                        <p>O melhor churrasco de toda região por delivery!.</p> 
+                    </div>
+                  </li>
+                  <li>
+                    <img src="https://i.postimg.cc/pTLXHbG4/logoescarpas.png" alt="" />
+                    <div class="flex-caption">
+                        <h3>Escarpas Sushi Bar!</h3> 
+                        <p>Venha saborear a melhor comida japonesa da cidade.</p>  
+                    </div>
+                  </li>
+                </ul>
+            </div>
+        <!-- end slider -->
+     
+        </section>
+        
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Buscar empresa...">
+            <button type="button" onclick="buscarEmpresa()">Buscar</button>
+            <button type="button" onclick="mostrarSomenteCategorias()">Mostrar Categorias</button> <!-- Novo botão -->
+        </div>
+        
+        <!-- Barra de Categorias -->
+        <nav>
+            <ul class="categorias">
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('academias')">Academias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('acougues')">Açougues</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('agencias-de-viagem')">Agências de Viagem</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('alfaiatarias')">Alfaiatarias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('armazens')">Armazéns</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('atelies')">Ateliês</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('autoescolas')">Autoescolas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('bancos')">Bancos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('bares')">Bares</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('bibliotecas')">Bibliotecas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('boutiques')">Boutiques</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('cafeterias')">Cafeterias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('cabeleireiros')">Cabeleireiros</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('casas-de-cambio')">Casas de Câmbio</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('centros-automotivos')">Centros Automotivos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('centros-culturais')">Centros Culturais</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('clinicas-de-estetica')">Clínicas de Estética</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('clinicas-medicas')">Clínicas Médicas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('colegios')">Colégios</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('confeitarias')">Confeitarias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('consultorios-odontologicos')">Consultórios Odontológicos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('correios')">Correios</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('creches')">Creches</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('decoracao')">Decoração</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('drogarias')">Drogarias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('escolas-de-idiomas')">Escolas de Idiomas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('escolas-de-musica')">Escolas de Música</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('escritorios-de-advocacia')">Escritórios de Advocacia</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('estudios-fotograficos')">Estúdios Fotográficos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('farmacias')">Farmácias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('floriculturas')">Floriculturas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('frutarias')">Frutarias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('galerias-de-arte')">Galerias de Arte</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('hamburguerias')">Hamburguerias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('hospitais')">Hospitais</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('hoteis')">Hotéis</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('imobiliarias')">Imobiliárias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('igrejas')">Igrejas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('joalherias')">Joalherias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lanchonetes')">Lanchonetes</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lavanderias')">Lavanderias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('livrarias')">Livrarias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-antiguidades')">Lojas de Antiguidades</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-brinquedos')">Lojas de Brinquedos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-celulares')">Lojas de Celulares</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-departamentos')">Lojas de Departamentos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-eletronicos')">Lojas de Eletrônicos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-informatica')">Lojas de Informática</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-material-de-construcao')">Lojas de Material de Construção</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-moveis')">Lojas de Móveis</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-roupas')">Lojas de Roupas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-sapatos')">Lojas de Sapatos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('lojas-de-utilidades-domesticas')">Lojas de Utilidades Domésticas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('mercados')">Mercados</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('moteis')">Motéis</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('museus')">Museus</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('padarias')">Padarias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('parques')">Parques</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('pizzarias')">Pizzarias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('postos-de-gasolina')">Postos de Gasolina</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('pousadas')">Pousadas</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('restaurantes')">Restaurantes</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('saloes-de-beleza')">Salões de Beleza</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('sorveterias')">Sorveterias</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('supermercados')">Supermercados</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('teatros')">Teatros</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('templos-religiosos')">Templos Religiosos</a></li>
+                <li><a href="javascript:void(0);" onclick="exibirEmpresas('veterinarias')">Veterinárias</a></li>
+            </ul>
+        </nav>
+
+        <div id="lista-empresas"></div>
+    </div>
+    <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="widget">
+                    <h5 class="widgetheading">Nosso Contato</h5>
+                    <address>
+                    <strong>Target company Inc</strong><br>
+                        JC Main Road, Near Silnile tower<br>
+                        Pin-21542 NewYork US.</address>
+                    <p>
+                        <i class="icon-phone"></i> (123) 456-789 - 1255-12584 <br>
+                        <i class="icon-envelope-alt"></i> email@domainname.com
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="widget">
+                    <h5 class="widgetheading">Quick Links</h5>
+                    <ul class="link-list">
+                        <li><a href="#">Latest Events</a></li>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Contact us</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-	</header>
-	<!-- end header -->
-	<section id="featured">
-	 
-	<!-- Slider -->
-        <div id="main-slider" class="flexslider">
-            <ul class="slides">
-              <li>
-                <img src="img/slides/1.jpg" alt="" />
-                <div class="flex-caption">
-                    <h3>Awesome Design</h3> 
-					<p>Doloribus omnis minus temporibus perferendis ipsa architecto non, magni quam</p>  
+    </div>
+    <div id="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="copyright">
+                        <p>
+                            <span>&copy;  Meta 2024 Todos os direitos reservados. Por </span><a href="http://instagram.com/douuglinha95" target="_blank">Douglas Rodrigues</a>
+                        </p>
+                    </div>
                 </div>
-              </li>
-              <li>
-                <img src="img/slides/2.jpg" alt="" />
-                <div class="flex-caption">
-                    <h3>Fully Responsive</h3> 
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elitincidunt eius magni provident.</p> 
-                </div>
-              </li>
-              <li>
-                <img src="img/slides/3.jpg" alt="" />
-                <div class="flex-caption">
-                    <h3>Multi-purpose Theme</h3> 
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit donec mer lacinia.</p>  
-                </div>
-              </li>
-            </ul>
-        </div>
-	<!-- end slider -->
- 
-	</section>
-	<section class="callaction">
-	<div class="container">
-		<div class="row">
-		<div class="col-md-4">
-		<img src="img/people.png" alt="" width="100%"/>
-		</div>
-			<div class="col-md-8">
-				<div><h1><span>Hello,<span class="blue_text">Welcome!!</span></span></h1><span class="clear spacer_responsive_hide_mobile " style="height:13px;display:block;"></span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus, vero mollitia velit ad consectetur. Alias, laborum excepturi nihil autem nemo numquam, ipsa architecto non, magni consequuntur quam.</p>
-				<p>Perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus, vero mollitia quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus, vero mollitia velit ad consectetur.</p>
-				</div>
-			</div>
-		</div>
-		
-	</div>
-	</section>
-	<section id="content">
-	
-	
-	<div class="container">
-		
-	     <div class="row">
-							<div class="col-md-8">
-								<!-- Heading and para -->
-								<div class="block-heading-two">
-									<h3><span>Why Choose Us?</span></h3>
-								</div>
-								<p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur. <br><br>Sed ut perspiciaatis iste natus error sit voluptatem probably haven't heard of them accusamus.</p>
-								<p>Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo quasi architecto beatae vitae dicta sunt explicabo.</p>
-							</div>
-							<div class="col-md-4">
-								<div class="block-heading-two">
-									<h3><span>Our Solution</span></h3>
-								</div>		
-								<!-- Accordion starts -->
-								<div class="panel-group" id="accordion-alt3">
-								 <!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
-								  <div class="panel">	
-									<!-- Panel heading -->
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
-											<i class="fa fa-angle-right"></i> Accordion Heading Text Item # 1
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseOne-alt3" class="panel-collapse collapse">
-										<!-- Panel body -->
-										<div class="panel-body">
-										  Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-										</div>
-									 </div>
-								  </div>
-								  <div class="panel">
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3">
-											<i class="fa fa-angle-right"></i> Accordion Heading Text Item # 2
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseTwo-alt3" class="panel-collapse collapse">
-										<div class="panel-body">
-										  Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-										</div>
-									 </div>
-								  </div>
-								  <div class="panel">
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
-											<i class="fa fa-angle-right"></i> Accordion Heading Text Item # 3
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseThree-alt3" class="panel-collapse collapse">
-										<div class="panel-body">
-										  Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-										</div>
-									 </div>
-								  </div>
-								  <div class="panel">
-									 <div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
-											<i class="fa fa-angle-right"></i> Accordion Heading Text Item # 4
-										  </a>
-										</h4>
-									 </div>
-									 <div id="collapseFour-alt3" class="panel-collapse collapse">
-										<div class="panel-body">
-										  Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-										</div>
-									 </div>
-								  </div>
-								</div>
-								<!-- Accordion ends -->
-								
-							</div>
-							
-					
-							
-						</div>
-	
-	
-	</div>
-	
-	</section>
-	<div class="testimonial-area">
-    <div class="testimonial-solid">
-        <div class="container"> 
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="">
-                        <a href="#"></a>
-                    </li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1" class="">
-                        <a href="#"></a>
-                    </li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2" class="active">
-                        <a href="#"></a>
-                    </li>
-                    <li data-target="#carousel-example-generic" data-slide-to="3" class="">
-                        <a href="#"></a>
-                    </li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="item">
-                        <p>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
-                        <p>
-                            <b>- Mark John -</b>
-                        </p>
-                    </div>
-                    <div class="item">
-                        <p>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
-                        <p>
-                            <b>- Jaison Warner -</b>
-                        </p>
-                    </div>
-                    <div class="item active">
-                        <p>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
-                        <p>
-                            <b>- Tony Antonio -</b>
-                        </p>
-                    </div>
-                    <div class="item">
-                        <p>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
-                        <p>
-                            <b>- Leena Doe -</b>
-                        </p>
-                    </div>
+                <div class="col-lg-6">
+                    <ul class="social-network">
+                        <li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-</div>
-	<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-3">
-				<div class="widget">
-					<h5 class="widgetheading">Our Contact</h5>
-					<address>
-					<strong>Target company Inc</strong><br>
-					JC Main Road, Near Silnile tower<br>
-					 Pin-21542 NewYork US.</address>
-					<p>
-						<i class="icon-phone"></i> (123) 456-789 - 1255-12584 <br>
-						<i class="icon-envelope-alt"></i> email@domainname.com
-					</p>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="widget">
-					<h5 class="widgetheading">Quick Links</h5>
-					<ul class="link-list">
-						<li><a href="#">Latest Events</a></li>
-						<li><a href="#">Terms and conditions</a></li>
-						<li><a href="#">Privacy policy</a></li>
-						<li><a href="#">Career</a></li>
-						<li><a href="#">Contact us</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="widget">
-					<h5 class="widgetheading">Latest posts</h5>
-					<ul class="link-list">
-						<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-						<li><a href="#">Pellentesque et pulvinar enim. Quisque at tempor ligula</a></li>
-						<li><a href="#">Natus error sit voluptatem accusantium doloremque</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="widget">
-					<h5 class="widgetheading">Recent News</h5>
-					<ul class="link-list">
-						<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-						<li><a href="#">Pellentesque et pulvinar enim. Quisque at tempor ligula</a></li>
-						<li><a href="#">Natus error sit voluptatem accusantium doloremque</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="sub-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="copyright">
-						<p>
-							<span>&copy; Target 2014 All right reserved. By </span><a href="http://webthemez.com" target="_blank">WebThemez</a>
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<ul class="social-network">
-						<li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-						<li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
-						<li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	</footer>
+    </footer>
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
-<!-- javascript
-    ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
+    
+
+<script src="script.js"></script>
 <script src="js/jquery.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -321,7 +224,6 @@
 <script src="js/portfolio/setting.js"></script>
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/animate.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/owl-carousel/owl.carousel.js"></script>
+<script src="js/custom.js"></script>   
 </body>
 </html>
