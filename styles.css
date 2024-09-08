@@ -1686,7 +1686,7 @@ blockquote cite a:visited 				{ color:#555; }
 /* Para celulares */
 @media screen and (max-width: 480px) {
     .empresa {
-        width: 90%; /* Usa quase toda a tela em celulares */
+        width: 70%; /* Usa quase toda a tela em celulares */
     }
 }
 
