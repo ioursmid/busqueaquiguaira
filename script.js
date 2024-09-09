@@ -3,6 +3,7 @@ const empresas = [
         categoria: 'lojas-de-celulares',
         logo: 'https://i.postimg.cc/xCGs2h7r/logoalfa.png',
         descricao: 'Alfa Prime',
+        palavrasChave: ['celular', 'assistência', 'conserto de celular', 'loja de celular'],
         whatsapp: 'https://wa.me/5517999740086',
         instagram: 'https://instagram.com/alfa.prime_',
         localizacao: 'https://maps.app.goo.gl/jE7zd7NKHJ5E4W7F6'
@@ -11,92 +12,12 @@ const empresas = [
         categoria: 'restaurantes',
         logo: 'https://i.postimg.cc/pTLXHbG4/logoescarpas.png',
         descricao: 'Escarpas Sushi Bar',
+        palavrasChave: ['sushi', 'comida japonesa', 'restaurante', 'comida', 'japones'],
         whatsapp: 'https://wa.me/5511999999999',
         instagram: 'https://instagram.com/loja2',
         localizacao: 'https://goo.gl/maps/exemplo2'
     },
-    {
-        categoria: 'autoescolas',
-        logo: 'https://via.placeholder.com/100',
-        descricao: 'Loja 2 - Vendas de eletrônicos',
-        whatsapp: 'https://wa.me/5511999999999',
-        instagram: 'https://instagram.com/loja2',
-        localizacao: 'https://goo.gl/maps/exemplo2'
-    },
-    {
-        categoria: 'drogarias',
-        logo: 'https://via.placeholder.com/100',
-        descricao: 'Loja 2 - Vendas de eletrônicos',
-        whatsapp: 'https://wa.me/5511999999999',
-        instagram: 'https://instagram.com/loja2',
-        localizacao: 'https://goo.gl/maps/exemplo2'
-    },
-    {
-        categoria: 'drogarias',
-        logo: 'https://via.placeholder.com/100',
-        descricao: 'Loja 2 - Vendas de eletrônicos',
-        whatsapp: 'https://wa.me/5511999999999',
-        instagram: 'https://instagram.com/loja2',
-        localizacao: 'https://goo.gl/maps/exemplo2'
-    },
-    {
-        categoria: 'drogarias',
-        logo: 'https://via.placeholder.com/100',
-        descricao: 'Loja 2 - Vendas de eletrônicos',
-        whatsapp: 'https://wa.me/5511999999999',
-        instagram: 'https://instagram.com/loja2',
-        localizacao: 'https://goo.gl/maps/exemplo2'
-    },
-    {
-        categoria: 'drogarias',
-        logo: 'https://via.placeholder.com/100',
-        descricao: 'Loja 2 - Vendas de eletrônicos',
-        whatsapp: 'https://wa.me/5511999999999',
-        instagram: 'https://instagram.com/loja2',
-        localizacao: 'https://goo.gl/maps/exemplo2'
-    },
-    {
-        categoria: 'drogarias',
-        logo: 'https://via.placeholder.com/100',
-        descricao: 'Loja 2 - Vendas de eletrônicos',
-        whatsapp: 'https://wa.me/5511999999999',
-        instagram: 'https://instagram.com/loja2',
-        localizacao: 'https://goo.gl/maps/exemplo2'
-    },
-    {
-        categoria: 'drogarias',
-        logo: 'https://via.placeholder.com/100',
-        descricao: 'Loja 2 - Vendas de eletrônicos',
-        whatsapp: 'https://wa.me/5511999999999',
-        instagram: 'https://instagram.com/loja2',
-        localizacao: 'https://goo.gl/maps/exemplo2'
-    },
-    {
-        categoria: 'drogarias',
-        logo: 'https://via.placeholder.com/100',
-        descricao: 'Loja 2 - Vendas de eletrônicos',
-        whatsapp: 'https://wa.me/5511999999999',
-        instagram: 'https://instagram.com/loja2',
-        localizacao: 'https://goo.gl/maps/exemplo2'
-    },
-    {
-        categoria: 'drogarias',
-        logo: 'https://via.placeholder.com/100',
-        descricao: 'Loja 2 - Vendas de eletrônicos',
-        whatsapp: 'https://wa.me/5511999999999',
-        instagram: 'https://instagram.com/loja2',
-        localizacao: 'https://goo.gl/maps/exemplo2'
-    },
-    {
-        categoria: 'drogarias',
-        logo: 'https://via.placeholder.com/100',
-        descricao: 'Loja 2 - Vendas de eletrônicos',
-        whatsapp: 'https://wa.me/5511999999999',
-        instagram: 'https://instagram.com/loja2',
-        localizacao: 'https://goo.gl/maps/exemplo2'
-    }
-    
-    // Acrescente até 50 empresas aqui
+    // Adicione mais empresas aqui
 ];
 
 const listaEmpresas = document.getElementById('lista-empresas');
@@ -147,7 +68,9 @@ function buscarEmpresa() {
     const categorias = document.querySelector('.categorias'); // Seleciona o elemento de categorias
 
     const resultados = empresas.filter(empresa =>
-        empresa.descricao.toLowerCase().includes(termoBusca) || empresa.categoria.toLowerCase().includes(termoBusca)
+        empresa.descricao.toLowerCase().includes(termoBusca) || 
+        empresa.categoria.toLowerCase().includes(termoBusca) ||
+        empresa.palavrasChave.some(palavra => palavra.toLowerCase().includes(termoBusca))
     );
 
     if (resultados.length > 0) {
