@@ -123,6 +123,7 @@ header .navbar {
 	letter-spacing: -1px;
     margin-top: 20px;
     padding: 0 0 0 15px;
+    
 }
 .navbar-default .navbar-brand{
 color: #0066ff;
@@ -1762,7 +1763,7 @@ blockquote cite a:visited 				{ color:#555; }
 /* Ajustes gerais para dispositivos móveis */
 @media (max-width: 768px) {
     .navbar-brand img {
-        max-height: 40px;
+        max-height: 50px;
     }
 
     .search-box {
