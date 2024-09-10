@@ -3,7 +3,7 @@ const empresas = [
         categoria: 'lojas-de-celulares',
         logo: 'https://i.postimg.cc/xCGs2h7r/logoalfa.png',
         descricao: 'Alfa Prime',
-        palavrasChave: ['celular', 'assistência', 'conserto de celular', 'loja de celular'],
+        palavrasChave: ['loja','celular', 'assistência', 'conserto de celular', 'loja de celular', 'manutenção de smartphone', 'reparo de telefone', 'assistência técnica', 'troca de tela', 'loja de smartphones', 'loja de acessórios para celular', 'conserto de iPhone', 'reparo de Android', 'troca de bateria', 'tela quebrada', 'loja de eletrônicos', 'acessórios para celular', 'recarga de celular', 'desbloqueio de celular', 'reparo urgente de celular', 'celulares usados' ],
         whatsapp: 'https://wa.me/5517999740086',
         instagram: 'https://instagram.com/alfa.prime_',
         localizacao: 'https://maps.app.goo.gl/jE7zd7NKHJ5E4W7F6'
