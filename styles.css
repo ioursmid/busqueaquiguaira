@@ -1742,6 +1742,15 @@ blockquote cite a:visited 				{ color:#555; }
     margin: 20px auto;
 }
 
+.categorias .botao-vermelho {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
 .categorias li {
     list-style: none;
     margin: 5px;
