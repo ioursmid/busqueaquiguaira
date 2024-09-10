@@ -22,7 +22,7 @@ const empresas = [
         categoria: 'emergencias',
         logo: 'img/logosamu.png',
         descricao: 'SAMU (Serviço de Atendimento Móvel de Urgência)',
-        telefone: <a href="tel:+55192">Ligar 192 (SAMU)</a>,
+        telefone: 'tel:+55192',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/SAMU+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['emergência', 'saúde', 'urgência', 'ambulância', 'SAMU']
     },
