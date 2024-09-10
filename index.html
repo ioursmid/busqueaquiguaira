@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="http://instagram/douuglinha95" />
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="/icons/icon-192x192.png">
     <title>Busque aqui Guaíra !</title>
     <!--css-->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -13,6 +16,7 @@
     <link href="css/flexslider.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
 
 </head>
 <body>
@@ -220,6 +224,36 @@
 <script src="js/portfolio/setting.js"></script>
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/animate.js"></script>
-<script src="js/custom.js"></script>   
+<script src="js/custom.js"></script>
+
+<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').then((registration) => {
+        console.log('Service Worker registrado com sucesso:', registration);
+  
+        // Verificar por atualizações no Service Worker
+        registration.onupdatefound = function () {
+          const installingWorker = registration.installing;
+          installingWorker.onstatechange = function () {
+            if (installingWorker.state === 'installed') {
+              if (navigator.serviceWorker.controller) {
+                // Nova versão disponível, forçar recarregamento
+                console.log('Nova versão disponível. Atualizando...');
+                window.location.reload();
+              }
+            }
+          };
+        };
+      }).catch((error) => {
+        console.log('Falha ao registrar o Service Worker:', error);
+      });
+    }
+  
+    // Listener para a atualização automática
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      window.location.reload();
+    });
+  </script>
+
 </body>
 </html>
