@@ -210,7 +210,6 @@ function exibirEmpresas(categoria) {
             const empresaDiv = document.createElement('div');
             empresaDiv.classList.add('empresa');
 
-            // Verifica se a empresa tem WhatsApp
             let whatsappButton = empresa.whatsapp ? `<a href="${empresa.whatsapp}" target="_blank"><button><i class="fab fa-whatsapp"></i></button></a>` : '';
             let instagramButton = empresa.instagram ? `<a href="${empresa.instagram}" target="_blank"><button><i class="fab fa-instagram"></i></button></a>` : '';
             let telefoneButton = empresa.telefone ? `<a href="tel:${empresa.telefone}" target="_blank"><button><i class="fas fa-phone"></i></button></a>` : '';
@@ -242,10 +241,13 @@ function mostrarTodasCategorias() {
     botaoMostrarCategorias.style.display = 'none'; // Esconde o botão de mostrar categorias novamente
 }
 
-// Função de busca (opcional, caso queira incluir buscas)
+// Função de busca
 function buscarEmpresa() {
     const termoBusca = document.getElementById('search-input').value.toLowerCase();
     listaEmpresas.innerHTML = ''; // Limpa a lista atual
+
+    // Esconde as categorias ao realizar uma busca
+    categorias.style.display = 'none';
 
     const resultados = empresas.filter(empresa =>
         empresa.descricao.toLowerCase().includes(termoBusca) || 
@@ -278,6 +280,9 @@ function buscarEmpresa() {
     } else {
         listaEmpresas.innerHTML = '<p>Nenhuma empresa encontrada.</p>';
     }
+
+    // Exibe o botão para restaurar as categorias
+    botaoMostrarCategorias.style.display = 'block';
 }
 
 // Exibe o botão para restaurar as categorias e limpar a lista
@@ -285,8 +290,6 @@ document.getElementById('mostrar-categorias').addEventListener('click', mostrarT
 
 // Exibir todas as categorias ao carregar a página inicialmente
 botaoMostrarCategorias.style.display = 'none'; // Esconde o botão de "Mostrar Categorias" ao carregar a página
-
-
 
 
 
