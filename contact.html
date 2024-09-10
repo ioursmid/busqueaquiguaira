@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="http://instagram/douuglinha95" />
-    <title>Busque aqui Guaíra !</title>
+    <title>Busque aqui Guaíra!</title>
     <!--css-->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -51,63 +51,82 @@
 		</div>
 	</div>
 	</section>
-	                        <section id="content">
-	
-	                            <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <p>Tem alguma dúvida sobre nossa empresa? Contate-nos.</p>
-                                            <div class="alert alert-success hidden" id="contactSuccess">
-                                                <strong>Success!</strong> Sua mensagem foi enviada com sucesso.
-                                            </div>
-                                            <div class="alert alert-error hidden" id="contactError">
-                                                <strong>Error!</strong> Houve um erro ao enviar sua mensagem.
-                                            </div>
-                                            <div class="contact-form">
-                                                <form id="contact-form" role="form" action="send_email.php" method="POST" novalidate="novalidate">
-                                                    <div class="form-group has-feedback">
-                                                        <label for="name">Nome</label>
-                                                        <input type="text" class="form-control" id="name" name="name" placeholder="Seu nome" required>
-                                                        <i class="fa fa-user form-control-feedback"></i>
-                                                    </div>
-                                                    <div class="form-group has-feedback">
-                                                        <label for="email">Email</label>
-                                                        <input type="email" class="form-control" id="email" name="email" placeholder="Seu email" required>
-                                                        <i class="fa fa-envelope form-control-feedback"></i>
-                                                    </div>
-                                                    <div class="form-group has-feedback">
-                                                        <label for="subject">Assunto</label>
-                                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Assunto" required>
-                                                        <i class="fa fa-navicon form-control-feedback"></i>
-                                                    </div>
-                                                    <div class="form-group has-feedback">
-                                                        <label for="message">Mensagem</label>
-                                                        <textarea class="form-control" rows="6" id="message" name="message" placeholder="Escreva sua mensagem" required></textarea>
-                                                        <i class="fa fa-pencil form-control-feedback"></i>
-                                                    </div>
-                                                    <input type="submit" value="Enviar" class="btn btn-default">
-                                                </form>
-                                            </div>
-                                            </div>
-        
-									         </div>
-								        </div>
-                                        <div class="map-container">
-                                            <iframe 
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4657.62525666188!2d-48.326026723919696!3d-20.31306608116322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bb0bd7288a4a4f%3A0x75a8c45187953dba!2sR.%2014%20B%2C%2064%2C%20Gua%C3%ADra%20-%20SP%2C%2014790-000!5e1!3m2!1spt-BR!2sbr!4v1725780460017!5m2!1spt-BR!2sbr" 
-                                                width="600" 
-                                                height="450" 
-                                                style="border:0;" 
-                                                allowfullscreen="" 
-                                                loading="lazy" 
-                                                referrerpolicy="no-referrer-when-downgrade">
-                                            </iframe>
-                                        </div>   
-							    </div>
-	</div>
- 
-	</section>
-	<!-- Rodapé -->
+
+    <!-- Formulário de Contato -->
+    <section id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Tem alguma dúvida sobre nossa empresa? Contate-nos.</p>
+                    <div class="alert alert-success hidden" id="contactSuccess">
+                        <strong>Sucesso!</strong> Sua mensagem foi enviada com sucesso.
+                    </div>
+                    <div class="alert alert-error hidden" id="contactError">
+                        <strong>Erro!</strong> Houve um erro ao enviar sua mensagem.
+                    </div>
+                    <div class="contact-form">
+                        <form id="contact-form" role="form" onsubmit="sendWhatsAppMessage(event)">
+                            <div class="form-group has-feedback">
+                                <label for="name">Nome</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Seu nome" required>
+                                <i class="fa fa-user form-control-feedback"></i>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Seu email" required>
+                                <i class="fa fa-envelope form-control-feedback"></i>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label for="subject">Assunto</label>
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Assunto" required>
+                                <i class="fa fa-navicon form-control-feedback"></i>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label for="message">Mensagem</label>
+                                <textarea class="form-control" rows="6" id="message" name="message" placeholder="Escreva sua mensagem" required></textarea>
+                                <i class="fa fa-pencil form-control-feedback"></i>
+                            </div>
+                            <input type="submit" value="Enviar" class="btn btn-default">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script para enviar a mensagem via WhatsApp -->
+    <script>
+        function sendWhatsAppMessage(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            const phone = "17999754390"; // Número do WhatsApp
+            const whatsappMessage = `Nome: ${name}%0AEmail: ${email}%0AAssunto: ${subject}%0AMensagem: ${message}`;
+
+            const whatsappURL = `https://wa.me/${phone}?text=${whatsappMessage}`;
+
+            window.open(whatsappURL, '_blank'); // Abre o WhatsApp em uma nova aba
+        }
+    </script>
+
+    <!-- Mapa -->
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4657.62525666188!2d-48.326026723919696!3d-20.31306608116322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bb0bd7288a4a4f%3A0x75a8c45187953dba!2sR.%2014%20B%2C%2064%2C%20Gua%C3%ADra%20-%20SP%2C%2014790-000!5e1!3m2!1spt-BR!2sbr!4v1725780460017!5m2!1spt-BR!2sbr" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>   
+
+    <!-- Rodapé -->
     <footer class="bg-light text-center text-lg-start">
         <div class="container p-4">
             <div class="row">
@@ -145,7 +164,7 @@
                             <a href="https://www.facebook.com/profile.php?id=61565158666215&mibextid=LQQJ4d" class="btn btn-outline-dark btn-floating m-1"><i class="fab fa-facebook"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="https://wa.me/17999754390?text=Vim%20pelo%20o%20site%20BusqueaquiGuaira" target="_blank" class="btn btn-outline-dark btn-floating m-1"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://wa.me/17999754390?text=Vim%20pelo%20site%20BusqueaquiGuaira" target="_blank" class="btn btn-outline-dark btn-floating m-1"><i class="fab fa-whatsapp"></i></a>
                         </li>
                         <li class="list-inline-item">
                             <a href="https://www.instagram.com/anuncieaqui.guaira?igsh=eGs0Nm1hcnhiNTUw" class="btn btn-outline-dark btn-floating m-1"><i class="fab fa-instagram"></i></a>
@@ -163,9 +182,8 @@
 
 <!-- Botão de Scroll Up -->
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
-    
 
-<script src="script.js"></script>
+<!-- Scripts -->
 <script src="js/jquery.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>
 <script src="js/bootstrap.min.js"></script>
