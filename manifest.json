@@ -1,5 +1,10 @@
 {
+    "prefer_related_applications": false,
+    "lang": "pt-BR",
+    "dir": "ltr",
+    "id": "/",
     "name": "Busque Aqui Guaíra",
+    "description": "Um aplicativo web para buscar empresas de Guaíra.",
     "short_name": "BusqueAqui",
     "start_url": "/",
     "display": "standalone",
@@ -15,7 +20,15 @@
         "src": "/icons/icon-512x512.png",
         "sizes": "512x512",
         "type": "image/png"
+      },
+      {
+        "launch_handler": {
+          "client_mode": "navigate"
+        }
+        
       }
     ]
   }
   
+
+ 
