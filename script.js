@@ -8,15 +8,7 @@ const empresas = [
         instagram: 'https://instagram.com/alfa.prime_',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/alfaprime+guaira+sp/@-20.3228136,-48.3131217,17z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409'
     },
-    {
-        categoria: 'restaurantes',
-        logo: 'https://i.postimg.cc/pTLXHbG4/logoescarpas.png',
-        descricao: 'Escarpas Sushi Bar',
-        palavrasChave: ['sushi', 'comida japonesa', 'restaurante', 'comida', 'japones'],
-        whatsapp: 'https://wa.me/5511999999999',
-        instagram: 'https://instagram.com/loja2',
-        localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/escarpas+sushi+bar+guaira+sp/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409'
-    },
+    
     // Emergências
     {
         categoria: 'emergencias',
@@ -197,72 +189,24 @@ const empresas = [
 ];
 
 const listaEmpresas = document.getElementById('lista-empresas');
+const categorias = document.querySelector('.categorias');
+const botaoMostrarCategorias = document.getElementById('mostrar-categorias');
 
-// Função para filtrar empresas por categoria
+// Função para exibir empresas por categoria e destacar a categoria selecionada
 function exibirEmpresas(categoria) {
     listaEmpresas.innerHTML = ''; // Limpa a lista atual
-    empresas.filter(empresa => empresa.categoria === categoria).forEach(empresa => {
-        const empresaDiv = document.createElement('div');
-        empresaDiv.classList.add('empresa');
+    categorias.style.display = 'none'; // Esconde todas as categorias
 
-        // Verifica se a empresa tem WhatsApp
-        let whatsappButton = empresa.whatsapp ? `<a href="${empresa.whatsapp}" target="_blank"><button><i class="fab fa-whatsapp"></i></button></a>` : '';
-        let instagramButton = empresa.instagram ? `<a href="${empresa.instagram}" target="_blank"><button><i class="fab fa-instagram"></i></button></a>` : '';
-        let telefoneButton = empresa.telefone ? `<a href="tel:${empresa.telefone}" target="_blank"><button><i class="fas fa-phone"></i></button></a>` : '';
+    // Exibe a categoria selecionada em destaque
+    const categoriaSelecionada = document.createElement('h3');
+    categoriaSelecionada.innerText = `Categoria: ${categoria.charAt(0).toUpperCase() + categoria.slice(1)}`;
+    listaEmpresas.appendChild(categoriaSelecionada);
 
-        empresaDiv.innerHTML = `
-            <img src="${empresa.logo}" alt="Logo da empresa" />
-            <p>${empresa.descricao}</p>
-            <div class="botoes">
-                ${whatsappButton}
-                ${instagramButton}
-                ${telefoneButton}
-                <a href="${empresa.localizacao}" target="_blank"><button><i class="fas fa-map-marker-alt"></i></button></a>
-             </div>
-        `;
+    // Filtra as empresas com base na categoria
+    const empresasFiltradas = empresas.filter(empresa => empresa.categoria === categoria);
 
-        listaEmpresas.appendChild(empresaDiv);
-    });
-}
-
-// Exibir todas as empresas inicialmente
-empresas.forEach(empresa => {
-    const empresaDiv = document.createElement('div');
-    empresaDiv.classList.add('empresa');
-
-    // Verifica se a empresa tem WhatsApp
-    let whatsappButton = empresa.whatsapp ? `<a href="${empresa.whatsapp}" target="_blank"><button><i class="fab fa-whatsapp"></i></button></a>` : '';
-    let instagramButton = empresa.instagram ? `<a href="${empresa.instagram}" target="_blank"><button><i class="fab fa-instagram"></i></button></a>` : '';
-    let telefoneButton = empresa.telefone ? `<a href="tel:${empresa.telefone}" target="_blank"><button><i class="fas fa-phone"></i></button></a>` : '';
-
-    empresaDiv.innerHTML = `
-        <img src="${empresa.logo}" alt="Logo da empresa" />
-        <p>${empresa.descricao}</p>
-        <div class="botoes">
-            ${whatsappButton}
-            ${instagramButton}
-            ${telefoneButton}
-            <a href="${empresa.localizacao}" target="_blank"><button><i class="fas fa-map-marker-alt"></i></button></a>
-        </div>
-    `;
-
-    listaEmpresas.appendChild(empresaDiv);
-});
-
-function buscarEmpresa() {
-    const termoBusca = document.getElementById('search-input').value.toLowerCase();
-    listaEmpresas.innerHTML = ''; // Limpa a lista atual
-    const categorias = document.querySelector('.categorias'); // Seleciona o elemento de categorias
-
-    const resultados = empresas.filter(empresa =>
-        empresa.descricao.toLowerCase().includes(termoBusca) || 
-        empresa.categoria.toLowerCase().includes(termoBusca) ||
-        empresa.palavrasChave.some(palavra => palavra.toLowerCase().includes(termoBusca))
-    );
-
-    if (resultados.length > 0) {
-        categorias.style.display = 'none'; // Esconde as categorias
-        resultados.forEach(empresa => {
+    if (empresasFiltradas.length > 0) {
+        empresasFiltradas.forEach(empresa => {
             const empresaDiv = document.createElement('div');
             empresaDiv.classList.add('empresa');
 
@@ -285,10 +229,64 @@ function buscarEmpresa() {
             listaEmpresas.appendChild(empresaDiv);
         });
     } else {
-        categorias.style.display = 'none'; // Esconde as categorias
+        listaEmpresas.innerHTML = '<p>Nenhuma empresa encontrada nesta categoria.</p>';
+    }
+
+    botaoMostrarCategorias.style.display = 'block'; // Mostra o botão para exibir as categorias novamente
+}
+
+// Função para exibir todas as categorias e empresas
+function mostrarTodasCategorias() {
+    categorias.style.display = ''; // Mostra as categorias
+    listaEmpresas.innerHTML = ''; // Limpa a lista de empresas
+    botaoMostrarCategorias.style.display = 'none'; // Esconde o botão de mostrar categorias novamente
+}
+
+// Função de busca (opcional, caso queira incluir buscas)
+function buscarEmpresa() {
+    const termoBusca = document.getElementById('search-input').value.toLowerCase();
+    listaEmpresas.innerHTML = ''; // Limpa a lista atual
+
+    const resultados = empresas.filter(empresa =>
+        empresa.descricao.toLowerCase().includes(termoBusca) || 
+        empresa.categoria.toLowerCase().includes(termoBusca) ||
+        empresa.palavrasChave.some(palavra => palavra.toLowerCase().includes(termoBusca))
+    );
+
+    if (resultados.length > 0) {
+        resultados.forEach(empresa => {
+            const empresaDiv = document.createElement('div');
+            empresaDiv.classList.add('empresa');
+
+            let whatsappButton = empresa.whatsapp ? `<a href="${empresa.whatsapp}" target="_blank"><button><i class="fab fa-whatsapp"></i></button></a>` : '';
+            let instagramButton = empresa.instagram ? `<a href="${empresa.instagram}" target="_blank"><button><i class="fab fa-instagram"></i></button></a>` : '';
+            let telefoneButton = empresa.telefone ? `<a href="tel:${empresa.telefone}" target="_blank"><button><i class="fas fa-phone"></i></button></a>` : '';
+
+            empresaDiv.innerHTML = `
+                <img src="${empresa.logo}" alt="Logo da empresa" />
+                <p>${empresa.descricao}</p>
+                <div class="botoes">
+                    ${whatsappButton}
+                    ${instagramButton}
+                    ${telefoneButton}
+                    <a href="${empresa.localizacao}" target="_blank"><button><i class="fas fa-map-marker-alt"></i></button></a>
+                </div>
+            `;
+
+            listaEmpresas.appendChild(empresaDiv);
+        });
+    } else {
         listaEmpresas.innerHTML = '<p>Nenhuma empresa encontrada.</p>';
     }
 }
+
+// Exibe o botão para restaurar as categorias e limpar a lista
+document.getElementById('mostrar-categorias').addEventListener('click', mostrarTodasCategorias);
+
+// Exibir todas as categorias ao carregar a página inicialmente
+botaoMostrarCategorias.style.display = 'none'; // Esconde o botão de "Mostrar Categorias" ao carregar a página
+
+
 
 
 
