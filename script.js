@@ -22,7 +22,7 @@ const empresas = [
         categoria: 'emergencias',
         logo: 'img/logosamu.png',
         descricao: 'SAMU (Serviço de Atendimento Móvel de Urgência)',
-        telefone: '+55192',
+        telefone: '192',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/SAMU+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['emergência', 'saúde', 'urgência', 'ambulância', 'SAMU']
     },
@@ -30,7 +30,7 @@ const empresas = [
         categoria: 'emergencias',
         logo: 'img/logopm.png',
         descricao: 'Polícia Militar',
-        telefone: '+55190',
+        telefone: '190',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/Polícia+Militar+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['polícia', 'segurança', 'emergência', 'crime', '190']
     },
@@ -38,7 +38,7 @@ const empresas = [
         categoria: 'emergencias',
         logo: 'img/logocb.png',
         descricao: 'Corpo de Bombeiros',
-        telefone: '+55193',
+        telefone: '193',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/Corpo+de+Bombeiros+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['bombeiros', 'incêndio', 'resgate', 'emergência', '193']
     },
@@ -46,7 +46,7 @@ const empresas = [
         categoria: 'emergencias',
         logo: 'img/logodefesacivil.png',
         descricao: 'Defesa Civil',
-        telefone: '551733312280',
+        telefone: '1733312280',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/Defesa+Civil+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['defesa civil', 'emergência', 'calamidade', 'desastres naturais', 'proteção']
     },
@@ -56,7 +56,7 @@ const empresas = [
         categoria: 'santa-casa',
         logo: 'img/logosantacasa.png',
         descricao: 'Santa Casa de Guaíra',
-        telefone: '551733300220',
+        telefone: '1733300220',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/Santa+Casa+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['hospital', 'saúde', 'atendimento médico', 'internação', 'Santa Casa']
     },
@@ -64,7 +64,7 @@ const empresas = [
         categoria: 'ubs',
         logo: 'img/logoubs.png',
         descricao: 'UBS "Dr. João Bosco Lelis" (Centro)',
-        telefone: '551733315941',
+        telefone: '1733315941',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/UBS+Dr.+João+Bosco+Lelis+Centro/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['UBS', 'posto de saúde', 'atendimento básico', 'saúde', 'Centro']
     },
@@ -72,7 +72,7 @@ const empresas = [
         categoria: 'ubs',
         logo: 'img/logoubs.png',
         descricao: 'UBS "Dr. Orlando Garcia Junqueira" (Vila Aparecida)',
-        telefone: '551733312904',
+        telefone: '1733312904',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/UBS+Dr.+Orlando+Garcia+Junqueira+Vila+Aparecida/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['UBS', 'posto de saúde', 'saúde', 'atendimento básico', 'Vila Aparecida']
     },
@@ -80,7 +80,7 @@ const empresas = [
         categoria: 'ubs',
         logo: 'img/logoubs.png',
         descricao: 'UBS "José Adalberto Lelis Garcia" (Vila Camacho)',
-        telefone: '551733314926',
+        telefone: '1733314926',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/UBS+José+Adalberto+Lelis+Garcia+Vila+Camacho/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['UBS', 'posto de saúde', 'atendimento médico', 'saúde', 'Vila Camacho']
     },
@@ -88,7 +88,7 @@ const empresas = [
         categoria: 'ubs',
         logo: 'img/logoubs.png',
         descricao: 'UBS "Anna Diniz Junqueira" (Tonico Garcia)',
-        telefone: '551733322455',
+        telefone: '1733322455',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/UBS+Anna+Diniz+Junqueira+Tonico+Garcia/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['UBS', 'posto de saúde', 'atendimento básico', 'saúde', 'Tonico Garcia']
     },
@@ -98,7 +98,7 @@ const empresas = [
         categoria: 'prefeitura',
         logo: 'img/logoguaira.png',
         descricao: 'Prefeitura Municipal de Guaíra',
-        telefone: '551733325100',
+        telefone: '1733325100',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/Prefeitura+Municipal+de+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['prefeitura', 'administração pública', 'governo', 'serviços públicos', 'Guaíra']
     },
@@ -106,7 +106,7 @@ const empresas = [
         categoria: 'secretarias',
         logo: 'img/logoguaira.png',
         descricao: 'Secretaria Municipal de Saúde',
-        telefone: '551733325121',
+        telefone: '1733325121',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/Secretaria+Municipal+de+Saude+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['saúde', 'administração', 'secretaria', 'serviços públicos', 'saúde pública']
     },
@@ -114,7 +114,7 @@ const empresas = [
         categoria: 'secretarias',
         logo: 'img/logoguaira.png',
         descricao: 'Secretaria Municipal de Educação',
-        telefone: '551733315863',
+        telefone: '1733315863',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/Secretaria+Municipal+de+Educacao+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['educação', 'escolas', 'administração pública', 'secretaria', 'Guaíra']
     },
@@ -122,7 +122,7 @@ const empresas = [
         categoria: 'secretarias',
         logo: 'img/logoguaira.png',
         descricao: 'Secretaria de Assistência Social',
-        telefone: '551733325105',
+        telefone: '1733325105',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/Secretaria+de+Assistência+Social+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['assistência social', 'secretaria', 'ajuda social', 'serviços públicos', 'Guaíra']
     },
@@ -130,7 +130,7 @@ const empresas = [
         categoria: 'secretarias',
         logo: 'img/logoguaira.png',
         descricao: 'Secretaria de Obras e Serviços Públicos',
-        telefone: '551733325100',
+        telefone: '1733325100',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/Secretaria+de+Obras+e+Serviços+Públicos+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['obras públicas', 'infraestrutura', 'serviços públicos', 'administração', 'Guaíra']
     },
@@ -138,7 +138,7 @@ const empresas = [
         categoria: 'secretarias',
         logo: 'img/logoguaira.png',
         descricao: 'Secretaria Municipal de Agricultura, Abastecimento e Meio Ambiente',
-        telefone: '551733326198',
+        telefone: '1733326198',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/Secretaria+Municipal+de+Agricultura+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['agricultura', 'meio ambiente', 'administração pública', 'abastecimento', 'Guaíra']
     },
@@ -146,7 +146,7 @@ const empresas = [
         categoria: 'secretarias',
         logo: 'img/logoguaira.png',
         descricao: 'Secretaria de Desenvolvimento Econômico',
-        telefone: '551733325125',
+        telefone: '1733325125',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/Secretaria+de+Desenvolvimento+Econômico+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['desenvolvimento', 'economia', 'serviços públicos', 'administração', 'Guaíra']
     },
@@ -154,7 +154,7 @@ const empresas = [
         categoria: 'secretarias',
         logo: 'img/logoguaira.png',
         descricao: 'Departamento de Recursos Humanos',
-        telefone: '551733325129',
+        telefone: '1733325129',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/Departamento+de+Recursos+Humanos+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['recursos humanos', 'RH', 'administração pública', 'emprego', 'Guaíra']
     },
@@ -162,7 +162,7 @@ const empresas = [
         categoria: 'secretarias',
         logo: 'img/logoguaira.png',
         descricao: 'Setor de Tributação (Impostos e Taxas)',
-        telefone: '551733325112',
+        telefone: '1733325112',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/Setor+de+Tributação+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['tributação', 'impostos', 'administração pública', 'taxas', 'Guaíra']
     },
@@ -170,7 +170,7 @@ const empresas = [
         categoria: 'secretarias',
         logo: 'img/logoguaira.png',
         descricao: 'Protocolo Geral',
-        telefone: '551733325127',
+        telefone: '1733325127',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/Protocolo+Geral+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['protocolo', 'documentos', 'administração pública', 'serviços públicos', 'Guaíra']
     },
@@ -178,7 +178,7 @@ const empresas = [
         categoria: 'secretarias',
         logo: 'img/logoguaira.png',
         descricao: 'Vigilância Sanitária',
-        telefone: '551733316480',
+        telefone: '1733316480',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/Vigilância+Sanitária+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['vigilância sanitária', 'saúde pública', 'segurança sanitária', 'higiene', 'Guaíra']
     },
@@ -186,7 +186,7 @@ const empresas = [
         categoria: 'secretarias',
         logo: 'img/logoguaira.png',
         descricao: 'Ouvidoria Municipal',
-        telefone: '551733325100',
+        telefone: '1733325100',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/Ouvidoria+Municipal+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['ouvidoria', 'reclamações', 'administração pública', 'serviços públicos', 'Guaíra']
     }
