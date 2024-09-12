@@ -181,7 +181,16 @@ const empresas = [
         telefone: '1733325100',
         localizacao: 'https://www.google.com/maps/dir/-20.3259904,-48.3098624/Ouvidoria+Municipal+Guaira+SP/@-20.3228136,-48.3131217,17z/data=!4m8!4m7!1m5!1m1!1s0x94bb0b3681938c29:0x960fd922f71e6377!2m2!1d-48.3112183!2d-20.3196409',
         palavrasChave: ['ouvidoria', 'reclamações', 'administração pública', 'serviços públicos', 'Guaíra']
-    }
+    },
+    {
+        categoria: 'igrejas',
+        logo: 'img/logoibbf.png',
+        descricao: 'Igreja Batista Boas Novas',
+        palavrasChave: ['igreja evangélica', 'culto evangélico', 'adoração a Deus', 'louvor e adoração', 'culto de domingo', 'oração evangélica', 'estudo bíblico', 'igreja cristã', 'palavra de Deus', 'culto ao vivo', 'igreja online', 'congregação evangélica', 'batismo evangélico', 'comunhão cristã', 'evangelismo', 'fé cristã', 'pastor evangélico', 'ministério de louvor', 'ensino bíblico', 'evangelho de Cristo', 'culto de jovens', 'grupo de oração', 'família cristã', 'evento evangélico', 'missões evangélicas', 'culto de cura', 'pregar o evangelho'],
+        whatsapp: 'https://wa.me/5517999785973',
+        instagram: 'https://instagram.com/ibbnguaira',
+        localizacao: 'https://maps.app.goo.gl/YiGpMY52h8A2sx5z7'
+    },
     
     
     
