@@ -186,7 +186,7 @@ const empresas = [
         categoria: 'igrejas',
         logo: 'img/logoibbf.png',
         descricao: 'Igreja Batista Boas Novas',
-        palavrasChave: ['igreja evangélica', 'culto evangélico', 'adoração a Deus', 'louvor e adoração', 'culto de domingo', 'oração evangélica', 'estudo bíblico', 'igreja cristã', 'palavra de Deus', 'culto ao vivo', 'igreja online', 'congregação evangélica', 'batismo evangélico', 'comunhão cristã', 'evangelismo', 'fé cristã', 'pastor evangélico', 'ministério de louvor', 'ensino bíblico', 'evangelho de Cristo', 'culto de jovens', 'grupo de oração', 'família cristã', 'evento evangélico', 'missões evangélicas', 'culto de cura', 'pregar o evangelho'],
+        palavrasChave: ['igreja batista','igreja','igreja evangélica', 'culto evangélico', 'adoração a Deus', 'louvor e adoração', 'culto de domingo', 'oração evangélica', 'estudo bíblico', 'igreja cristã', 'palavra de Deus', 'culto ao vivo', 'igreja online', 'congregação evangélica', 'batismo evangélico', 'comunhão cristã', 'evangelismo', 'fé cristã', 'pastor evangélico', 'ministério de louvor', 'ensino bíblico', 'evangelho de Cristo', 'culto de jovens', 'grupo de oração', 'família cristã', 'evento evangélico', 'missões evangélicas', 'culto de cura', 'pregar o evangelho'],
         whatsapp: 'https://wa.me/5517999785973',
         instagram: 'https://instagram.com/ibbnguaira',
         localizacao: 'https://maps.app.goo.gl/YiGpMY52h8A2sx5z7'
